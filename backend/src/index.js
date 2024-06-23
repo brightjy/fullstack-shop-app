@@ -2,9 +2,11 @@
 
 const express = require('express');
 const path = require('path'); // 절대 경로 사용 위해
+const cors = require('cors');
 const app = express();
 const port = 4000;
 
+app.use(cors());
 app.get('/', (req, res) => {
   res.send('안녕하세요!');
 })
