@@ -20,13 +20,22 @@ mongoose.connect(process.env.MONGO_URI)
     console.error(err);
   })
 
-app.get('/', (req, res) => {
-  res.send('안녕하세요!');
+app.get('/', (req, res, next) => {
+  setImmediate(() => { next(new Error('it ist an error')) });
+  // setImmediate(() => {throw new Error('it is an error')}); <- 비동기요청은 이렇게 하면 에러처리 안됨
+  // throw new Error('it is an error');
+  // res.send('안녕하세요!');
 })
 
 app.post('/', (req, res) => {
   console.log(req.body);
   res.json(req.body);
+})
+
+// 에러처리
+app.use((error, req, res, next) => {
+  res.status(err.status || 500);
+  res.send(error.message || '서버에서 에러가 났습니다.');
 })
 
 app.use(express.static(path.join(__dirname, '../uploads')));
