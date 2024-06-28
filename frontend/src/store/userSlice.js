@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit"
 
-const initailState = {
+const initialState = {
   userData: {
     id: '',
     email: '',
@@ -15,7 +15,7 @@ const initailState = {
 
 const userSlice = createSlice({
   name: 'user',
-  initailState,
+  initialState,
   reducers: {},
   extraReducers: (builder) => {}
 })
