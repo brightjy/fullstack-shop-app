@@ -3,5 +3,8 @@
     "eslint": "8.57.0",
     "eslint-config-react-app": "7.0.1",
     "vite-plugin-eslint": "1.8.1"
+  },
+  "dependencies": {
+    "react-hook-form": "7.52.0"
   }
 }
