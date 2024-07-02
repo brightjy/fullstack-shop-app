@@ -52,7 +52,7 @@ const RegisterPage = () => {
           회원가입
         </h1>
         <form className='mt-6' onSubmit={ handleSubmit(onSubmit) }>
-          <div className='mb-2'>
+          <div className='mb-2 text-left'>
             <label
               htmlFor='email'
               className='text-sm font-semibold text-black'>
@@ -73,7 +73,7 @@ const RegisterPage = () => {
               </div>
             }
           </div>
-          <div className='mb-2'>
+          <div className='mb-2 text-left'>
             <label
               htmlFor='name'
               className='text-sm font-semibold text-black'>
@@ -94,7 +94,7 @@ const RegisterPage = () => {
               </div>
             }
           </div>
-          <div className='mb-2'>
+          <div className='mb-2 text-left'>
             <label
               htmlFor='password'
               className='text-sm font-semibold text-black'>
