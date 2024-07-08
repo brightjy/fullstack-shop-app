@@ -32,6 +32,8 @@ app.post('/', (req, res) => {
   res.json(req.body);
 })
 
+app.use('/users', require('./routes/users'));
+
 // 에러처리
 app.use((error, req, res, next) => {
   res.status(err.status || 500);
