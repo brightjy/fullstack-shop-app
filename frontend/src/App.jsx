@@ -15,7 +15,7 @@ import ProtectedRoutes from './components/ProtectedRoutes'
 
 function Layout() {
   return (
-    <div className='flex flex-col h-screen justify-between'>
+    <div className='flex flex-col justify-between h-screen'>
       <ToastContainer
         position='bottom-right'
         theme='light'
@@ -23,7 +23,7 @@ function Layout() {
         autoClose={1500}
       />
       <Navbar />
-      <main className='mb-auto w-10/12 max-w-4xl mx-auto'>
+      <main className='w-10/12 max-w-4xl mx-auto mb-auto'>
         <Outlet/>
       </main>
       <Footer />
