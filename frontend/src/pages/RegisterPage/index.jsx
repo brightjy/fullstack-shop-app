@@ -116,7 +116,7 @@ const RegisterPage = () => {
             }
           </div>
           <div className='mt-6'>
-            <button type='submit' className='w-full px-4 py-2 rounded-md hover:bg-gray-700 duration-200'>
+            <button type='submit' className='w-full px-4 py-2 text-white duration-200 bg-black rounded-md hover:bg-gray-700'>
               회원가입
             </button>
           </div>
