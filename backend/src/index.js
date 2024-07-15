@@ -33,6 +33,7 @@ app.post('/', (req, res) => {
 })
 
 app.use('/users', require('./routes/users'));
+app.use('/products', require('./routes/products'));
 
 // 에러처리
 app.use((error, req, res, next) => {
