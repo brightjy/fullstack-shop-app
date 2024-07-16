@@ -15,7 +15,7 @@ const FileUpload = ({onImageChange, images}) => {
 
     try {
       const response = await axiosInstance.post('/products/image', formData, config);
-      onImageChange([...images, response.data.fileName]);
+      onImageChange([...images, response.data.filename]);
     } catch (error) {
       console.error(error);
     }
@@ -40,7 +40,7 @@ const FileUpload = ({onImageChange, images}) => {
         <div className='flex-grow h-[300px] border flex items-center justify-center overflow-x-scroll overflow-y-hidden'>
           {images.map(image => (
             <div key={image}>
-              <img 
+              <img
                 className='min-w-[300px] h-[300px]'
                 src={`${import.meta.env.VITE_SERVER_URL}/${image}`}
                 alt={image}
