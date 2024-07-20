@@ -74,7 +74,7 @@ const UploadProductPage = () => {
         <div className='mt-4'>
           <label>이름</label>
           <input 
-            className='w-full px-4 py-2 bg-white border rounded-md'
+            className='w-full px-4 py-2 bg-white border rounded-md text-black'
             name='title'
             id='title'
             onChange={handleChange}
@@ -85,7 +85,7 @@ const UploadProductPage = () => {
         <div className='mt-4'>
           <label>설명</label>
           <input 
-            className='w-full px-4 py-2 bg-white border rounded-md'
+            className='w-full px-4 py-2 bg-white border rounded-md text-black'
             name='description'
             id='description'
             onChange={handleChange}
@@ -96,7 +96,7 @@ const UploadProductPage = () => {
         <div className='mt-4'>
           <label>가격</label>
           <input 
-            className='w-full px-4 py-2 bg-white border rounded-md'
+            className='w-full px-4 py-2 bg-white border rounded-md text-black'
             name='price'
             id='price'
             type='number'
@@ -108,7 +108,7 @@ const UploadProductPage = () => {
         <div className='mt-4'>
           <label htmlFor='continents'>지역</label>
           <select 
-            className='w-full px-4 py-2 mt-2 bg-white border rounded-md'
+            className='w-full px-4 py-2 mt-2 bg-white border rounded-md text-black'
             name='continents' 
             id='continents'
             onChange={handleChange}
