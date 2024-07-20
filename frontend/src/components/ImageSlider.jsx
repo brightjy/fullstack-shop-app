@@ -12,7 +12,6 @@ const ImageSlider = ({images}) => {
                 alt={image}
                 className='w-full max-h-[150px]'
               />
-              <p className="legend">Legend 1</p>
           </div>
       ))}  
       </Carousel>
