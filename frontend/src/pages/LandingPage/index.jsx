@@ -21,7 +21,7 @@ const LandingPage = () => {
     fetchProducts({skip, limit});
   }, []);
 
-  const fetchProducts = async ({skip, limit, loadMore = false, fitlers={}, searchTerm = ""}) => {
+  const fetchProducts = async ({skip, limit, loadMore = false, filters={}, searchTerm = ""}) => {
     const params = {
       skip,
       limit,
@@ -32,7 +32,7 @@ const LandingPage = () => {
       const response = await axiosInstance.get('/products', {params});
 
       if (loadMore) {
-        setProducts([...products, response.data.products]);
+        setProducts([...products, ...response.data.products]);
       } else {
         setProducts(response.data.products);
       }
