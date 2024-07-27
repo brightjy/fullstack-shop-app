@@ -49,7 +49,7 @@ router.get('/', async (req, res, next) => {
   }
 
   if (term) {
-    findArgs["$text"] = { $search: term };
+    findArgs["title"] = { $regex: term };
   }
 
   console.log(findArgs);
