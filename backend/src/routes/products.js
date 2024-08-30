@@ -29,6 +29,15 @@ router.get('/:id', async (req, res, next) => {
   const type = req.query.type;
   let productIds = req.params.id;
 
+  if (type === "array") {
+    // id = 1233, 12345, 123456 이런식으로 넘어온 것을
+    // productIds = ['1233', '12345', '123456'] 이런 식으로 바꿔주기
+    let ids = productIds.split(',');
+    productIds = ids.map(item => {
+      return item
+    })
+  }
+
   try {
     const product = await Product
       .find({ _id: { $in: productIds }})
