@@ -86,3 +86,29 @@ export const addToCart = createAsyncThunk(
   }
 )
 
+export const getCartItems = createAsyncThunk(
+  "user/getCartItems",
+  async ({ cartItemIds, userCart }, thunkAPI) => {
+      try {
+          const response = await axiosInstance.get(
+              `/products/${cartItemIds}?type=array`,
+          )
+          // CartItems에 해당하는 정보들을
+          // Product Collection에서 가져온 후에
+          // Quantity 정보를 넣어 준다. 
+          userCart.forEach(cartItem => {
+            response.data.forEach((productDetail, index) => {
+              if (cartItem.id === productDetail._id) {
+                response.data[index].quantity = cartItem.quantity;
+              }
+            })
+          })
+
+          return response.data;
+      } catch (error) {
+          console.log(error);
+          return thunkAPI.rejectWithValue(error.response.data || error.message);
+      }
+  }
+)
+
