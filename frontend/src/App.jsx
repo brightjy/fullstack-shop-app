@@ -59,7 +59,7 @@ function App() {
           <Route path="/product/upload" element={<UploadProductPage />} />
           <Route path="/product/:productId" element={<DetailProductPage />} />
           <Route path="/history" element={<HistoryPage />} />
-          <Route path="/cart" element={<CartPage />} />
+          <Route path="/user/cart" element={<CartPage />} />
         </Route>
         {/* 로그인 안한 사람만 */}
         <Route element={<NotAuthRoutes isAuth={isAuth} />}>
