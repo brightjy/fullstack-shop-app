@@ -93,7 +93,7 @@ const userSlice = createSlice({
       })
       .addCase(getCartItems.fulfilled, (state, action) => {
         state.isLoading = false;
-        state.cartDetail.cart = action.payload;
+        state.cartDetail = action.payload;
       })
       .addCase(getCartItems.rejected, (state, action) => {
         state.isLoading = false;

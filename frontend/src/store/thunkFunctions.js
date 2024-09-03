@@ -102,6 +102,7 @@ export const getCartItems = createAsyncThunk(
                 response.data[index].quantity = cartItem.quantity;
               }
             })
+            console.log(response.data);
           })
 
           return response.data;
