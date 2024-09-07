@@ -23,7 +23,7 @@ const CartTable = ({ products, onRemoveItem }) => {
           {product.price.toLocaleString()} 원
         </td>
         <td>
-          <button onClick={() => onRemoveItem(product.id)}>
+          <button onClick={() => onRemoveItem(product._id)}>
             지우기
           </button>
         </td>
