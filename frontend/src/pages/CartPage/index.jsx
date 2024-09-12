@@ -55,7 +55,7 @@ const CartPage = () => {
         <>
           <CartTable products={cartDetail} onRemoveItem={handleRemoveCartItem}/>
           <div className='mt-10'>
-            <p><span className='font-bold'>합계: </span>{total.toLocaleString()}원</p>
+            <p><span className='font-bold'>합계: </span>{total?.toLocaleString()}원</p>
             <button 
               className='text-white bg-black rounded-md hover:bg-gray-500 px-4 py-2 mt-5'
               onClick={ handlePaymentClick }  

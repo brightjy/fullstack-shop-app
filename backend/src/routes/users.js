@@ -155,7 +155,7 @@ router.post('/payment', auth, async (req, res) => {
 
   req.body.cartDetail.forEach((item) => {
     history.push({
-      dataOfPurchase: new Date().toISOString(),
+      dateOfPurchase: new Date().toISOString(),
       name: item.title,
       id: item._id,
       price: item.price,
